@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CineWave - فیلم و سریال">
+  <title>CineWave | فیلم و سریال</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="CineWave"><span>◈</span> CineWave</a>
+  <nav><a href="#home">خانه</a><a href="#movies">فیلم‌ها</a><a href="#series">سریال‌ها</a><a href="#mylist">لیست من</a></nav>
+  <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="جست‌وجوی فیلم یا سریال..." autocomplete="off"></label>
+</header>
+<main id="app">
+  <section id="hero" class="hero"></section>
+  <section class="section" id="home"><div class="section-head"><h2>محبوب‌ترین‌ها</h2><button class="ghost" data-filter="all">مشاهده همه</button></div><div class="cards" id="popularGrid"></div></section>
+  <section class="section" id="movies"><div class="section-head"><h2>فیلم‌ها</h2></div><div class="chips" id="movieChips"></div><div class="cards" id="movieGrid"></div></section>
+  <section class="section" id="series"><div class="section-head"><h2>سریال‌ها</h2></div><div class="cards" id="seriesGrid"></div></section>
+  <section class="section" id="mylist"><div class="section-head"><h2>لیست من</h2><span class="muted" id="listCount"></span></div><div class="cards" id="myListGrid"></div></section>
+</main>
+<div id="detailsModal" class="modal" hidden><div class="modal-panel details-panel"><button class="close" data-close>×</button><div id="detailsContent"></div></div></div>
+<div id="playerModal" class="modal" hidden><div class="modal-panel player-panel"><button class="close" data-close>×</button><div class="player-title" id="playerTitle"></div><video id="video" controls playsinline preload="metadata"></video><div class="player-help">برای پخش محتوای خودت، آدرس فایل ویدئویی مجاز را در داده‌های برنامه قرار بده.</div></div></div>
+<div id="toast" class="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
